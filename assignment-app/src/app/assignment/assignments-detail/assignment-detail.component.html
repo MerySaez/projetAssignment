@@ -2,9 +2,9 @@
     <mat-card *ngIf="assignmentTransmis">
 
         <mat-card-header>
-            <mat-card-title>
+            <h1>
                 {{assignmentTransmis.nom}}
-            </mat-card-title>
+            </h1>
             <mat-card-subtitle>
                 {{assignmentTransmis.dateDeRendu | date}}
             </mat-card-subtitle>
@@ -17,7 +17,7 @@
         <mat-card-content>
             Nom de l'élève : {{assignmentTransmis.auteur}}
         </mat-card-content>
-        <mat-card-content>
+        <mat-card-content style="float:left;">
             Matiere : {{assignmentTransmis.matiere}}
             <img *ngIf="assignmentTransmis.matiere=='Angular'" class="img-responsive" src="..\assets\RS9100_BUFFA Michel-scr.jpg">
             <img *ngIf="assignmentTransmis.matiere=='Management'" class="img-responsive" src="..\assets\stephane_tounsi.jpg">
@@ -38,7 +38,7 @@
                 Devoir rendu
             </mat-checkbox>
             <ng-container *ngIf="authService.isAdminn">
-            <button mat-flat-button color="warn" (click)="onDelete()">DELETE</button>
+            <button mat-flat-button color="warn" (click)="onDelete()">DELETE <mat-icon>close</mat-icon> </button>
             </ng-container>
             <span *ngIf="authService.loggedIn">
             <button mat-flat-button color="primary" [routerLink]="'/assignment/' + assignmentTransmis.id + '/edit/'">UPDATE</button>

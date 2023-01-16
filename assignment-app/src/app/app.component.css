@@ -1,5 +1,5 @@
 .navbar-color {
-    background-color: #154b61; color: white;
+    background-color: #1b4761; color: white;
 }
 .example-spacer {
     flex: 1 1 auto;
@@ -7,7 +7,7 @@
 
   .colors {
     color: rgb(244, 245, 245);
-    background-color: rgb(70, 93, 120);
+    background-color: rgb(23, 24, 25);
   }
 
   
@@ -31,9 +31,7 @@
 }
 
 /* Grid row 1 */
-mat-toolbar {
 
-}
 
 /* Grid row 2 */
 main {

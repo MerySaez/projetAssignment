@@ -36,9 +36,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatSelectModule} from '@angular/material/select';
 import {MatSortModule} from '@angular/material/sort';
-import { AccountComponent } from './sidebar/account/account.component';
-import { MatPaginator } from '@angular/material/paginator';
-import {MatPaginatorIntl, MatPaginatorModule} from '@angular/material/paginator';
+import {MatPaginatorModule} from '@angular/material/paginator';
 import { AgendaComponent } from './sidebar/agenda/agenda.component';
 import { AddAgendaComponent } from './sidebar/agenda/add-agenda/add-agenda.component';
 import { TableFilterPipe } from './assignment/table-filter-pipe';
@@ -56,7 +54,6 @@ const routes:Routes = [
 
     //canActivate: [AuthGuard]
   },
-  {path: 'account', component: AccountComponent},
   {path: 'agenda', component: AgendaComponent},
   {path: 'addAgenda', component: AddAgendaComponent},
 
@@ -69,7 +66,6 @@ const routes:Routes = [
     AddAssignmentComponent,
     EditAssignmentComponent,
     LoginComponent,
-    AccountComponent,
     AgendaComponent,
     AddAgendaComponent,TableFilterPipe
   ],
