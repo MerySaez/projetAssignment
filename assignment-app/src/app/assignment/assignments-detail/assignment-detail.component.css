@@ -12,3 +12,8 @@ h1 {
 .imagePlace {
     left: auto;
 }
+
+.img-responsive {
+    position: relative;
+    left: 0px;
+}

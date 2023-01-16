@@ -18,11 +18,13 @@
             Nom de l'élève : {{assignmentTransmis.auteur}}
         </mat-card-content>
         <mat-card-content class="imagePlace">
-            Matiere : {{assignmentTransmis.matiere}}
+            
             <img *ngIf="assignmentTransmis.matiere=='Angular'" class="img-responsive" src="..\assets\RS9100_BUFFA Michel-scr.jpg">
             <img *ngIf="assignmentTransmis.matiere=='Management'" class="img-responsive" src="..\assets\stephane_tounsi.jpg">
             <img *ngIf="assignmentTransmis.matiere=='Mathématique'" class="img-responsive" src="..\assets\donati.jfif">
             <img *ngIf="assignmentTransmis.matiere=='Java'" class="img-responsive" src="..\assets\renevier.jfif">
+            <br>
+            Matiere : {{assignmentTransmis.matiere}}
         </mat-card-content>
         <mat-card-content>
             Note : {{assignmentTransmis.note}}
