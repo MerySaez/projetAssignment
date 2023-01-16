@@ -12,7 +12,7 @@ export class LoggingService {
 
   constructor(private http:HttpClient) { }
 
-  uri = "http://localhost:8010/api/users";
+  uri = "https://assignment-app-sm.onrender.com/api/users";
   log(userName:string, action:string) {
     console.log(`Logging service: User ${userName}  ${action}`);
   }

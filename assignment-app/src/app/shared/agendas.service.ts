@@ -13,7 +13,7 @@ export class AgendasService {
   constructor(private logginService:LoggingService,
               private http:HttpClient) { }
 
- uri = "http://localhost:8010/api/agendas";
+ uri = "https://assignment-app-sm.onrender.com/api/agendas";
   getAgendas():Observable<Agenda[]> {
     return this.http.get<Agenda[]>(this.uri)
 
