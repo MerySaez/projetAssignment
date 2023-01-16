@@ -1,0 +1,49 @@
+
+<mat-sidenav-container fullscreen>
+  <!--SIDE BAR -->
+  <mat-sidenav #sidenav class="sw-sidenav">
+    <mat-list>
+      <button mat-button [routerLink]="['/account']"> Edit account</button><br>
+      <button mat-button [routerLink]="['/agenda']"> Agenda</button>
+      <div class="AjouterBtn">
+        <a routerLink="/add">
+          <button class="colors1" mat-flat-button color="primary">
+            Add Assignment
+          </button>
+        </a>
+      </div>
+    </mat-list>
+  </mat-sidenav>
+
+<!--<h1><nav>-->
+  <div >
+    <mat-toolbar class="navbar-color mat-elevation-z8 p-0" >
+      <button mat-icon-button  (click)="sidenav.open()" title="Open sidenav" class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <a routerLink="/home" style="color: #ffffff">
+        {{title}}
+      </a>
+      <span class="example-spacer"></span>
+      <span *ngIf="!authService.loggedIn">
+        <button mat-button class="colors" (click)="openModal()">Login</button>
+      </span>
+
+      <div *ngIf="authService.loggedIn">
+        <button mat-button class="nav-link colors" (click)="logout()" routerLink="" color="secondary">Logout</button>
+      </div >
+
+    </mat-toolbar>
+  </div>
+<!--<mat-slide-toggle color="primary" (click)="login()">Login</mat-slide-toggle>-->
+
+<div *ngIf="boutonActive && !authService.loggedIn">
+  <assignment-login></assignment-login>
+</div>
+
+<div class="scroller" #scroller1>
+<router-outlet></router-outlet>
+</div>
+</mat-sidenav-container>
+

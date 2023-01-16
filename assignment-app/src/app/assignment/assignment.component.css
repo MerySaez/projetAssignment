@@ -1,0 +1,69 @@
+.rendu {
+    color:green;
+
+}
+
+.nonRendu {
+    color: red;
+    border: 1px solid green;
+}
+
+.container {
+    padding: 1rem;
+}
+
+.ajouterBtn {
+    align-self: flex-end;
+}
+
+.mat-row .mat-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+  }
+  
+  .mat-row:hover .mat-cell {
+    border-color: currentColor;
+  }
+
+  table {
+    width: 100%;
+  }
+  
+
+  .colors1 {
+    color: rgb(244, 245, 245);
+    background-color: rgb(32, 99, 149);
+  }
+  .colors2 {
+    color: rgb(244, 245, 245);
+    background-color: rgb(13, 77, 126);
+  }
+
+  
+  .mat-header-cell {
+    background-color: #1b4761;
+    color: white;
+  }
+  .mat-header-cell:not(:first-child) {
+    padding-left: 0;
+  }
+  
+  /* Style just the text in the header */
+  .mat-header-cell span {
+    font-weight: 600;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+  }
+  /* Round the top table corners */
+  .mat-header-cell:first-child {
+    border-top-left-radius: 5px;
+  }
+  .mat-header-cell:last-child {
+    border-top-right-radius: 5px;
+  }
+
+  .mat-row:nth-child(2n) {
+    background-color: #cadbe0;
+  }

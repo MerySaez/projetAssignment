@@ -1,0 +1,48 @@
+<div class='contrainer'>
+    <mat-card *ngIf="assignmentTransmis">
+
+        <mat-card-header>
+            <mat-card-title>
+                {{assignmentTransmis.nom}}
+            </mat-card-title>
+            <mat-card-subtitle>
+                {{assignmentTransmis.dateDeRendu | date}}
+            </mat-card-subtitle>
+          </mat-card-header>
+
+          <mat-card-content>
+            Rendu : {{assignmentTransmis.rendu}}
+        </mat-card-content>
+        
+        <mat-card-content>
+            Nom de l'élève : {{assignmentTransmis.auteur}}
+        </mat-card-content>
+        <mat-card-content>
+            Matiere : {{assignmentTransmis.matiere}}
+            <img *ngIf="assignmentTransmis.matiere=='Angular'" class="img-responsive" src="..\assets\RS9100_BUFFA Michel-scr.jpg">
+            <img *ngIf="assignmentTransmis.matiere=='Management'" class="img-responsive" src="..\assets\stephane_tounsi.jpg">
+            <img *ngIf="assignmentTransmis.matiere=='Mathématique'" class="img-responsive" src="..\assets\donati.jfif">
+            <img *ngIf="assignmentTransmis.matiere=='Java'" class="img-responsive" src="..\assets\renevier.jfif">
+        </mat-card-content>
+        <mat-card-content>
+            Note : {{assignmentTransmis.note}}
+        </mat-card-content>
+        <mat-card-content>
+            Remarques : {{assignmentTransmis.remarques}}
+        </mat-card-content>
+        
+
+        <div id="bottom" >
+            <mat-checkbox  *ngIf="!assignmentTransmis.rendu && assignmentTransmis.note != null " (click)="onAssignmentRendu()">
+
+                Devoir rendu
+            </mat-checkbox>
+            <ng-container *ngIf="authService.isAdminn">
+            <button mat-flat-button color="warn" (click)="onDelete()">DELETE</button>
+            </ng-container>
+            <span *ngIf="authService.loggedIn">
+            <button mat-flat-button color="primary" [routerLink]="'/assignment/' + assignmentTransmis.id + '/edit/'">UPDATE</button>
+            </span>
+        </div>
+    </mat-card>
+</div>

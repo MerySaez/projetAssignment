@@ -1,0 +1,42 @@
+.navbar-color {
+    background-color: #154b61; color: white;
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .colors {
+    color: rgb(244, 245, 245);
+    background-color: rgb(70, 93, 120);
+  }
+
+  
+  .ajouterBtn {
+    align-self: flex-end;
+}
+
+.colors1 {
+  color: rgb(244, 245, 245);
+  background-color: rgb(32, 99, 149);
+}
+.colors2 {
+  color: rgb(244, 245, 245);
+  background-color: rgb(13, 77, 126);
+}
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+/* Grid row 1 */
+mat-toolbar {
+
+}
+
+/* Grid row 2 */
+main {
+  overflow-y: auto;
+  padding: 1rem;
+}

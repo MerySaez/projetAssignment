@@ -1,0 +1,33 @@
+<h1 mat-dialog-title>Login</h1>
+<div mat-dialog-content> Connect with the user and password</div>
+<div mat-dialog-actions>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <p *ngIf="flagsCheck">{{message}}</p>
+        </div>
+        <mat-form-field>
+            <!-- Le matprefix sert à ce que les fields soient bien alignés  et "person_outline c'est le p'tit logo du bonhomme"-->
+            <mat-icon matPrefix>person_outline</mat-icon>
+            <input matInput [(ngModel)]="userName" type="text" formControlName="username" placeholder="Username"
+                required>
+            <div *ngIf="submitted"></div>
+
+        </mat-form-field>
+
+        <br>
+
+        <mat-form-field>
+            <mat-icon matPrefix>lock_outline</mat-icon>
+            <input matInput [(ngModel)]="password" type="password" formControlName="password" placeholder="Password" required>
+            <div *ngIf="submitted"></div>
+        </mat-form-field>
+
+        <br>
+        <button type="submit" mat-raised-button color="primary">Login
+        </button>
+        <button mat-button mat-dialog-close>Close</button>
+        {{allValues | json }}
+
+    </form>
+</div>
